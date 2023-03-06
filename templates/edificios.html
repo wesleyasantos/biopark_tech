@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>Edificios</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/edificios.css') }}" media="screen">
+</head>
+<body>
+  <header>
+    <div class="container-2">
+      <nav class="menu-nav">
+        <div class="menu">
+          <ul>
+
+            <li>
+              <a class="logo-biopark" href="/">
+                <img src="./static/img/biopark_logo.png" class="logo-biopark">
+              </a>
+            </li>
+
+            <li>
+              <a class="home-html" href="/">Home</a>
+            </li>
+            
+            <li>
+              <a class="loc-html" href="/edificios">Edifícios</a>
+            </li>
+
+            <li>
+              <a class="apt-html" href="/apartamentos">Apartamentos</a>
+            </li>
+
+            <li>
+              <a class="loc-html" href="/locatarios">Locatários</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  {% block content %}
+  <section class="section-1">
+    <div class="painel">
+      <div class="cad-edificio-1"> 
+        <div class="form-1">
+          <form method="POST" action="/edificios">
+            <center>
+              <fieldset class="fieldset-1">
+                <legend class='titulo-fs-1'>Cadastrar Edifício</legend>
+                <label>Identificação do Edifício:<br></label>
+                <input type="number" id="id_edificio" name="id_edificio", class="id_edificio">
+                <label><br>Qual é o bloco do Edifício?<br></label>
+                <input type="text" id="bloco_edificio" name="bloco_edificio" class="bloco_edificio">
+                <div class="form-submit">
+                  <button type="submit" class="submit-control">Cadastrar</button>
+                </div>
+                <input type="hidden" value="Edifício cadastrado com sucesso!" name="success">
+                <input type="hidden" value="Não foi possível inserir os dados. Tente novamente!" name="erro">
+              </fieldset>
+            </center>
+          </form>
+        </div>
+      </div>
+      {% endblock %}
+      <h5 class="lista-apt-disp">Lista de Edificios</h5>
+      <div class="table-apt-disp">
+        <table method="get" class="table-disponiveis">
+          <tr>
+            <th class="table-cell">ID Edifício</th>
+            <th class="table-cell">Bloco</th>
+          </tr>
+          <tbody class="table-body-apt">
+            {% for edif in edificios %}
+            <tr>
+              <td class="table-cell">{{edif.id_edificio}}</td>
+              <td class="table-cell">{{edif.bloco_edificio}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <footer>
+        <p>
+          Projeto desenvolvido por Wesley Antonio S. de A. Sobreira
+        </p>
+      </footer>
+</body>
+</html>

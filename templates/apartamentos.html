@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>Edificios</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/apartamentos.css') }}" media="screen">
+</head>
+<body>
+  <header>
+    <div class="container-2">
+      <nav class="menu-nav">
+        <div class="menu">
+          <ul>
+
+            <li>
+              <a class="logo-biopark" href="/">
+                <img src="./static/img/biopark_logo.png" class="logo-biopark">
+              </a>
+            </li>
+
+            <li>
+              <a class="home-html" href="/">Home</a>
+            </li>
+            
+            <li>
+              <a class="edif-html" href="/edificios">Edifícios</a>
+            </li>
+
+            <li>
+              <a class="apt-html" href="/apartamentos">Apartamentos</a>
+            </li>
+
+            <li>
+              <a class="loc-html" href="/locatarios">Locatários</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="section-1">
+    <div class="row">
+      <h3>Para cadastrar um novo Edifício</h3>
+      <a href="/edificios">CLIQUE AQUI!</a>
+    </div>     
+      <div class="cad-apt-1">
+        <div class="form-2">
+          <form method="POST" action="/apartamentos">
+            <fieldset class="fieldset-2">
+              <legend class='titulo-fs-2'>Cadastrar Apartamento</legend>
+              <label><br>Identificação do Apartamento:<br></label>
+              <input type="number" id="nr_apartamento" name="nr_apartamento" class="nr_apartamento">
+              <label><br>Mensalidade:<br></label>
+              <input type="number" id="mensalidade" name="mensalidade" class="mensalidade">
+              <label><br>Disponibilidade:<br></label>
+              <input type="text" id="disponibilidade" name="disponibilidade" class="disponibilidade">
+              <label><br>Identificador do Edifício:<br></label>
+              <input type="number" id="id_edificio_apt" name="id_edificio_apt" class="id_edificio_apt">
+              <div class="form-submit-2">
+                <button type="submit" class="submit-control">Cadastrar</button>
+              </div> 
+              <input type="hidden" value="Apartamento cadastrado com sucesso!" name="success">
+              <input type="hidden" value="Não foi possível inserir os dados. Tente novamente!" name="erro">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <h5 class="lista-apt-disp">Lista de Apartamentos Disponíveis</h5>
+      <div class="table-apt-disp">
+        <table method="get" class="table-disponiveis">
+          <tr>
+            <th class="table-cell">Apartamento</th>
+            <th class="table-cell">Mensalidade</th>
+            <th class="table-cell">Disponibilidade</th>
+            <th class="table-cell">Edificio</th>
+          </tr>
+          <tbody class="table-body-apt">
+            {% for apt in apartamentos %}
+            <tr>
+              <td class="table-cell">{{ apt.nr_apartamento }}</td>
+              <td class="table-cell">{{ apt.mensalidade_apt }}</td>
+              <td class="table-cell">{{ apt.disponibilidade }}</td>
+              <td class="table-cell">{{ apt.id_edificio_apt }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Projeto desenvolvido por Wesley Antonio S. de A. Sobreira
+    </p>
+  </footer>
+
+</body>
+</html>

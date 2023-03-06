@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open sans';
+}
+
+.container-2{
+  width: 100%;
+  height: 100%;
+  background: #42455a;
+}
+
+.logo-biopark img{
+  max-width: 40px;
+  width: auto;
+  margin-top: -15px;
+  margin-right: 48px;
+}
+
+.menu ul {
+  display: inline-flex;
+  margin: 35px;
+  margin-top: 50px;
+}
+
+.menu ul li {
+  list-style: none;
+  margin: 0 20px;
+  color: #b2b1b1;
+  cursor: pointer;
+}
+
+.home-html {
+  color: #FFFFFF;
+  width: 700px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: large;
+}
+
+.edif-html {
+  color: #FFFFFF;
+  width: 700px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: large;
+}
+
+.loc-html {
+  color: #FFFFFF;
+  width: 700px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: large;
+}
+
+label, input{
+  position:relative;
+  text-align: left;
+  margin-right:5px;
+  top: -50px;
+  font-size: 20px;
+}
+
+input{
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 100px;
+}
+
+.submit-control{
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.titulo-fs-2{
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+.fieldset-2{
+  position: absolute;
+  left: 100px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  margin: 0 20px;
+  left: 20px;
+  right: 1350px;
+  top: 150px;
+}
+
+.home-html, .edif-html, .loc-html, .apt-html {
+  color: #FFFFFF;
+  width: 700px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: large;
+}
+
+.section-1 .table-1 {
+  width: 192px;
+  margin: -57px auto 0 94px;
+}
+
+.section-1 .table-2 {
+  width: 192px;
+  margin: -47px 94px 0 auto;
+}
+
+.section-1 .table-3 {
+  width: 192px;
+  margin: -67px -96px 0 auto;
+}
+
+.section-1 .form-1 {
+  height: 251px;
+  width: 500px;
+  margin: 10px 30px 0;
+}
+
+.lista-apt-disp {
+  position: absolute;
+  font-size: 30px;
+  left: 900px;
+  right: 200px;
+  top: 150px;
+}
+
+.table-disponiveis{
+  text-align: center;
+  position: absolute;
+  font-size: 30px;
+  left: 600px;
+  right: 200px;
+  top: 210px;
+}
+
+.table-cell {
+  background-color: #b2b1b1;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 15px;
+  font-size: large;
+  width: 300px;
+  margin: 30px;
+  padding: 5px;
+}
+
+.row{
+  text-align: left;
+  font-size: 20px;
+  margin-top: 600px;
+  margin-left: 50px;
+}
+
+footer{
+  text-align: left;
+  font-size: 20px;
+  margin-top: 1000px;
+  margin-left: 50px;
+}
+
+body{
+  background-image: url("../img/fundo2.jpg");
+  background-size: cover;
+  background-color: gainsboro;
+}
+
+
+
+
+
+
+
+
+
+
+
+
