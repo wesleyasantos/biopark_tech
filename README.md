@@ -39,9 +39,12 @@ Realize as instalações do Flask e suas dependências, conforme descrito abaixo
 ```
 pip install flask
 ```
+```
 pip install SQLAlchemy
 ```
+```
 pip install sqlalchemy-orm
+```
 ```
 pip install PyMySQL
 ```
@@ -67,4 +70,4 @@ Basta acessar o sistema e conferir as funcionalidades requeridas no desafio. :)
 
 ## ✒️ Autor
 
-* **Wesley Antonio Santos de Andrade Sobreira
+* Wesley Antonio Santos de Andrade Sobreira
